@@ -107,7 +107,4 @@ header span{
 		column-width: 10em;
 		transform: scale(1);
 	}
-	.gallery__item:hover {
-		transform: scale(1);
-	}
 }
