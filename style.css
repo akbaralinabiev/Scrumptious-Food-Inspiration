@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gap: .6rem;
+    --index: calc(1vw + 1vh);
+    --color-dark: #000;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+header{
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing:  .4em;
+    font-size: calc(var(--index) * 1.2);
+    position: absolute;
+    font-weight: 100;
+	text-align: center;
+    opacity: 0.9;
+}
+
+header h1{
+    margin-top: 550px;
+}
+
+header span{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(var(--index) * .75);
+    margin-top: 10px;
+}
+
+.gallery{
+    width: 35vw;
+    transform: scale(8.2);
+    column-width: 1em;
+    gap: var(--gap);
+    will-change: transform;
+    transition: tramsform 1s cubic-bezier(.075, 1, .25, 1), opacity 2s;
+}
+
+.gallery__item{
+    margin-bottom: var(--gap);
+    transform: scale(1.001);
+    will-change: transform;
+    transition:  .3s;
+}
+
+.gallery__item:hover{
+    transform: scale(1.03);
+}
+
+.gallery__item img{
+    width: 100%;
+    display: block;
+}
+
+.loaded .gallery{
+    opacity: 1;
+}
+
+.loaded header span{
+    opacity: 0;
+}
+
+
+/*******************DARK MODE OS******************/
+
+
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: var(--color-dark);
+    }
+    header h1{
+        filter: invert(100%);
+    }
+}
+
+
+/*******************MOBILE VERSION******************/
+
+
+@media (max-width : 800px) {
+ 
+	header {
+		position: relative;
+	}
+ 
+	body {
+		overflow: scroll;
+		display: block;
+		padding: var(--gap);
+	}
+ 
+	.gallery {
+		width: 100%;
+		column-width: 10em;
+		transform: scale(1);
+	}
+	.gallery__item:hover {
+		transform: scale(1);
+	}
+}
