@@ -18,22 +18,23 @@ body{
     display: flex;
 }
 
-header{
-    text-transform: uppercase;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    letter-spacing:  .4em;
-    font-size: calc(var(--index) * 1.2);
-    position: absolute;
-    font-weight: 100;
+header {
+	text-transform: uppercase;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	letter-spacing: .3em;
+	font-size: calc(var(--index) * 1.1);
+	position: absolute;
+	font-weight: 200;
 	text-align: center;
-    opacity: 0.9;
+	opacity: .9;
+	margin-top: .2em;
 }
 
 header h1{
     margin-top: 550px;
 }
 
-header span{
+header .loading{
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: calc(var(--index) * .75);
@@ -72,7 +73,6 @@ header span{
 .loaded header span{
     opacity: 0;
 }
-
 
 /*******************DARK MODE OS******************/
 
