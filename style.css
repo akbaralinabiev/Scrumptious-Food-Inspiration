@@ -76,7 +76,7 @@ header .loading{
 
 /*******************DARK MODE OS******************/
 
-
+/* 
 @media(prefers-color-scheme: dark){
     body{
         background-color: var(--color-dark);
@@ -84,13 +84,13 @@ header .loading{
     header h1{
         filter: invert(100%);
     }
-}
+} */
 
 
 /*******************MOBILE VERSION******************/
 
 
-@media (max-width : 800px) {
+@media (max-width : 700px) {
  
 	header {
 		position: relative;
